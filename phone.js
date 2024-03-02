@@ -27,7 +27,6 @@ const displayPhones = (phones, isShowAll )=>{
         phones = phones.slice(0,12);
     }
 
-    
     phones.forEach(phone =>{
         console.log(phone);
         //2 create a div
@@ -61,17 +60,8 @@ const  handleSearch = (isShowAll)=>{
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     console.log(searchText);
-    loadPhone(searchText);
+    loadPhone(searchText,isShowAll);
 }
-
-// handle Search recap
-// const handleSearch2 =()=>{
-//     toggleLoadingSpinner(true);
-//     const searchField2 = document.getElementById('search-field2');
-//     const searchText2 = searchField2.value;
-//     console.log(searchText2);
-//     loadPhone(searchText2);
-// }
 
 const toggleLoadingSpinner =(isLoading)=>{
     const loadingSpinner = document.getElementById('loading-spinner');
